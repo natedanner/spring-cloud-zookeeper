@@ -38,9 +38,9 @@ public class ZookeeperDiscoveryHealthIndicator implements DiscoveryHealthIndicat
 	private static final Log log = LogFactory
 			.getLog(ZookeeperDiscoveryHealthIndicator.class);
 
-	private CuratorFramework curatorFramework;
+	private final CuratorFramework curatorFramework;
 
-	private ServiceDiscovery<ZookeeperInstance> serviceDiscovery;
+	private final ServiceDiscovery<ZookeeperInstance> serviceDiscovery;
 
 	private final ZookeeperDependencies zookeeperDependencies;
 

@@ -62,9 +62,9 @@ import org.springframework.util.Assert;
  */
 public class ZookeeperPropertySourceLocator implements PropertySourceLocator {
 
-	private ZookeeperConfigProperties properties;
+	private final ZookeeperConfigProperties properties;
 
-	private CuratorFramework curator;
+	private final CuratorFramework curator;
 
 	private List<String> contexts;
 

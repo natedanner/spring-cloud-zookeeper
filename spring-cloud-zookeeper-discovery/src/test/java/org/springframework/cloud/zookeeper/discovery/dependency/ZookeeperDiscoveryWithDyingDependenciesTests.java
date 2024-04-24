@@ -84,7 +84,7 @@ public class ZookeeperDiscoveryWithDyingDependenciesTests {
 	private Callable<Boolean> applicationHasStartedOnANewPort(
 			final ConfigurableApplicationContext clientContext,
 			final Integer serverPortBeforeDying) {
-		return new Callable<Boolean>() {
+		return new Callable<>() {
 			@Override
 			public Boolean call() throws Exception {
 				try {

@@ -106,7 +106,7 @@ public class ZookeeperConfigServerBootstrapperCustomizerTests {
 
 	static class BindHandlerBootstrapper implements BootstrapRegistryInitializer, Ordered {
 
-		private int onSuccessCount = 0;
+		private int onSuccessCount;
 
 		private static <T> void registerIfAbsentAndEnabled(
 				BootstrapRegistry registry, Class<T> type, BootstrapRegistry.InstanceSupplier<T> supplier) {

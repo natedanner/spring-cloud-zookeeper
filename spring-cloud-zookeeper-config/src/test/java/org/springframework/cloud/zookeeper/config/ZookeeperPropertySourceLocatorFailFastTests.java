@@ -48,7 +48,7 @@ public class ZookeeperPropertySourceLocatorFailFastTests {
 
 	@Test
 	public void testFailFastFalseLoadsTheApplicationContext() {
-		assertThatCode(() -> {
+		assertThatCode(() ->
 			new SpringApplicationBuilder().sources(Config.class)
 					.web(WebApplicationType.NONE)
 					.run("--spring.application.name=testZookeeperPropertySourceLocatorFailFast",
@@ -58,8 +58,7 @@ public class ZookeeperPropertySourceLocatorFailFastTests {
 							"--spring.cloud.zookeeper.maxRetries=0",
 							"--spring.cloud.zookeeper.maxSleepMs=0",
 							"--spring.cloud.zookeeper.blockUntilConnectedWait=0",
-							"--spring.cloud.zookeeper.config.failFast=false");
-		}).doesNotThrowAnyException();
+							"--spring.cloud.zookeeper.config.failFast=false")).doesNotThrowAnyException();
 	}
 
 	@Test

@@ -41,21 +41,21 @@ public class ZookeeperHealthAutoConfigurationTests {
 
 	@Test
 	public void testDefaultPropertiesCreateZookeeperHealthIndicator() {
-		this.contextRunner.run((context) -> Assertions.assertThat(context)
+		this.contextRunner.run(context -> Assertions.assertThat(context)
 				.hasSingleBean(ZookeeperHealthIndicator.class));
 	}
 
 	@Test
 	public void testZookeeperHealthIndicatorDisabled() {
 		this.contextRunner.withPropertyValues("management.health.zookeeper.enabled=false")
-				.run((context) -> Assertions.assertThat(context)
+				.run(context -> Assertions.assertThat(context)
 						.doesNotHaveBean(ZookeeperHealthIndicator.class));
 	}
 
 	@Test
 	public void testZookeeperHealthIndicatorAlreadyAdded() {
 		this.contextRunner.withUserConfiguration(HealthIndicatorCustomConfig.class)
-				.run((context) -> {
+				.run(context -> {
 					Assertions.assertThat(context)
 							.hasSingleBean(ZookeeperHealthIndicator.class);
 					Assertions.assertThat(context)

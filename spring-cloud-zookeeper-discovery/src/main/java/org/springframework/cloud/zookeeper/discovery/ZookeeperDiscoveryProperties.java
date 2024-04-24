@@ -74,7 +74,7 @@ public class ZookeeperDiscoveryProperties {
 	/**
 	 * Use ip address rather than hostname during registration.
 	 */
-	private boolean preferIpAddress = false;
+	private boolean preferIpAddress;
 
 	/** Port to register the service under (defaults to listening port). */
 	private Integer instancePort;
@@ -103,7 +103,7 @@ public class ZookeeperDiscoveryProperties {
 	 * Order of the discovery client used by `CompositeDiscoveryClient` for sorting
 	 * available clients.
 	 */
-	private int order = 0;
+	private int order;
 
 	// Visible for Testing
 	protected ZookeeperDiscoveryProperties() {

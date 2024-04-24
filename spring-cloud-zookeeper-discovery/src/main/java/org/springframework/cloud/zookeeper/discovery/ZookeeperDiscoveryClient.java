@@ -74,7 +74,7 @@ public class ZookeeperDiscoveryClient implements DiscoveryClient {
 			final String serviceId) {
 		try {
 			if (getServiceDiscovery() == null) {
-				return Collections.EMPTY_LIST;
+				return Collections.emptyList();
 			}
 			String serviceIdToQuery = getServiceIdToQuery(serviceId);
 			Collection<ServiceInstance<ZookeeperInstance>> zkInstances = getServiceDiscovery()

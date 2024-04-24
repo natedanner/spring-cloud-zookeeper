@@ -40,7 +40,7 @@ public class ZookeeperPropertySource extends AbstractZookeeperPropertySource {
 
 	private static final Log log = LogFactory.getLog(ZookeeperPropertySource.class);
 
-	private Map<String, String> properties = new LinkedHashMap<>();
+	private final Map<String, String> properties = new LinkedHashMap<>();
 
 	public ZookeeperPropertySource(String context, CuratorFramework source) {
 		super(context, source);

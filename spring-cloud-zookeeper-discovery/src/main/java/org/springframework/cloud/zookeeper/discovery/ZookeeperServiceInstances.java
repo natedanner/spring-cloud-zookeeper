@@ -44,7 +44,7 @@ public class ZookeeperServiceInstances
 
 	private static final Log log = LogFactory.getLog(ZookeeperServiceInstances.class);
 
-	private ServiceDiscovery<ZookeeperInstance> serviceDiscovery;
+	private final ServiceDiscovery<ZookeeperInstance> serviceDiscovery;
 
 	private final ZookeeperDependencies zookeeperDependencies;
 

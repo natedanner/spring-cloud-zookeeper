@@ -151,14 +151,14 @@ public class ZookeeperAutoConfigurationTests {
 		@Order(1)
 		public CuratorFrameworkCustomizer customizer1(
 				@Qualifier("customizerCallOrder") List<Integer> callOrder) {
-			return (builder) -> callOrder.add(1);
+			return builder -> callOrder.add(1);
 		}
 
 		@Bean
 		@Order(2)
 		public CuratorFrameworkCustomizer customizer2(
 				@Qualifier("customizerCallOrder") List<Integer> callOrder) {
-			return (builder) -> callOrder.add(2);
+			return builder -> callOrder.add(2);
 		}
 
 	}

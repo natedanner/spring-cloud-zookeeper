@@ -50,7 +50,7 @@ public class DefaultDependencyWatcher implements DependencyRegistrationHookProvi
 
 	private final List<DependencyWatcherListener> listeners;
 
-	private ServiceDiscovery<ZookeeperInstance> serviceDiscovery;
+	private final ServiceDiscovery<ZookeeperInstance> serviceDiscovery;
 
 	private final DependencyPresenceOnStartupVerifier dependencyPresenceOnStartupVerifier;
 

@@ -102,7 +102,7 @@ public class ZookeeperDiscoveryWithDependenciesIntegrationTests {
 	@Test
 	public void should_find_a_collaborator_via_load_balanced_rest_template_by_using_its_alias_from_dependencies() {
 		// expect:
-		await().until(() -> callingServiceAtBeansEndpointIsNotEmpty());
+		await().until(this::callingServiceAtBeansEndpointIsNotEmpty);
 	}
 
 	@Ignore // FIXME 2.0.0

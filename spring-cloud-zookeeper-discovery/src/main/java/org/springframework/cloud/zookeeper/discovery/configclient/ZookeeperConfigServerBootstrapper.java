@@ -129,7 +129,7 @@ public class ZookeeperConfigServerBootstrapper implements BootstrapRegistryIniti
 		// create instance provider
 		registry.registerIfAbsent(ConfigServerInstanceProvider.Function.class, context -> {
 			if (!isEnabled(context)) {
-				return (id) -> Collections.emptyList();
+				return id -> Collections.emptyList();
 			}
 			return context.get(ZookeeperDiscoveryClient.class)::getInstances;
 		});

@@ -40,7 +40,7 @@ import static org.mockito.Mockito.mock;
  */
 class ZookeeperReactiveDiscoveryClientConfigurationTests {
 
-	private ApplicationContextRunner contextRunner = new ApplicationContextRunner()
+	private final ApplicationContextRunner contextRunner = new ApplicationContextRunner()
 			.withInitializer(new ZookeeperTestingServer.Initializer())
 			.withConfiguration(
 					AutoConfigurations.of(UtilAutoConfiguration.class,

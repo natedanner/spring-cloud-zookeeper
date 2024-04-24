@@ -91,7 +91,7 @@ public class ZookeeperConfigDataLocationResolver implements ConfigDataLocationRe
 
 		ZookeeperPropertySources sources = new ZookeeperPropertySources(properties, log);
 
-		List<Context> contexts = (locationUri == null || CollectionUtils.isEmpty(locationUri.getPathSegments()))
+		List<Context> contexts = locationUri == null || CollectionUtils.isEmpty(locationUri.getPathSegments())
 				? sources.generateAutomaticContexts(profiles.getAccepted(), false) : getCustomContexts(locationUri);
 
 		// promote beans to context

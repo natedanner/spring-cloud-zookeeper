@@ -46,7 +46,7 @@ public class ZookeeperTestingServer implements SmartApplicationListener, Ordered
 
 	private final Log log = LogFactory.getLog(getClass());
 
-	private AtomicBoolean started = new AtomicBoolean();
+	private final AtomicBoolean started = new AtomicBoolean();
 
 	private TestingServer testingServer;
 

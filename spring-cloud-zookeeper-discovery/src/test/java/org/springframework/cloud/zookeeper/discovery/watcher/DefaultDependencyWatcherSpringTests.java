@@ -79,7 +79,7 @@ public class DefaultDependencyWatcherSpringTests {
 		this.registry.deregister(this.zookeeperRegistration);
 
 		// then:
-		Awaitility.await().until(new Callable<Boolean>() {
+		Awaitility.await().until(new Callable<>() {
 			@Override
 			public Boolean call() throws Exception {
 				then(DefaultDependencyWatcherSpringTests.this.dependencyWatcherListener.dependencyState)
@@ -132,7 +132,7 @@ public class DefaultDependencyWatcherSpringTests {
 	static class AssertableDependencyPresenceOnStartupVerifier
 			extends DependencyPresenceOnStartupVerifier {
 
-		boolean startupPresenceVerified = false;
+		boolean startupPresenceVerified;
 
 		AssertableDependencyPresenceOnStartupVerifier() {
 			super(new LogMissingDependencyChecker());

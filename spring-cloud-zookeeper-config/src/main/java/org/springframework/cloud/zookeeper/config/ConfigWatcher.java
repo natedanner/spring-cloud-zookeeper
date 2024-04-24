@@ -51,11 +51,11 @@ public class ConfigWatcher
 
 	private static final Log log = LogFactory.getLog(ConfigWatcher.class);
 
-	private AtomicBoolean running = new AtomicBoolean(false);
+	private final AtomicBoolean running = new AtomicBoolean(false);
 
-	private List<String> contexts;
+	private final List<String> contexts;
 
-	private CuratorFramework source;
+	private final CuratorFramework source;
 
 	private ApplicationEventPublisher publisher;
 

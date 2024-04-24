@@ -146,7 +146,7 @@ public class ZookeeperConfigServerBootstrapperTests {
 	}
 	static class BindHandlerBootstrapper implements BootstrapRegistryInitializer {
 
-		private int onSuccessCount = 0;
+		private int onSuccessCount;
 
 		@Override
 		public void initialize(BootstrapRegistry registry) {
